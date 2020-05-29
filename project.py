@@ -77,7 +77,7 @@ print(model.summary())
 #training Parameters
 
 batch_size = 128
-epoch = 10
+
 
 history = model.fit (x_train,y_train,
                      batch_size=batch_size,
@@ -91,3 +91,10 @@ model.save("mnist_lenet.h5")
 scores = model.evaluate(x_test,y_test,verbose=1)
 print('test loss:',scores[0])
 print('test accuracy:',scores[1])
+try:
+    f = open('/modelacc/out.txt','w')
+    f.write(str(int(scores[1])))
+except:
+    print(end="")
+finally:
+    f.close()
