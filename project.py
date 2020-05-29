@@ -92,7 +92,7 @@ scores = model.evaluate(x_test,y_test,verbose=1)
 print('test loss:',scores[0])
 print('test accuracy:',scores[1])
 try:
-    f = open('/modelacc/out.txt','w')
+    f = open('/project/out.txt','w')
     f.write(str(int(scores[1])))
 except:
     print(end="")
