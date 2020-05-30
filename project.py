@@ -89,11 +89,11 @@ model.save("mnist_lenet.h5")
 
 #evaluation
 scores = model.evaluate(x_test,y_test,verbose=1)
-print('test loss:',scores[0])
-print('test accuracy:',scores[1])
+print('test loss:',scores[0]*100)
+print('test accuracy:',scores[1]*100)
 try:
     f = open('/project/out.txt','w')
-    f.write(str(int(scores[1]*100)))
+    f.write(str(scores[1]*100))
 except:
     print(end="")
 finally:
