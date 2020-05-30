@@ -93,7 +93,7 @@ print('test loss:',scores[0])
 print('test accuracy:',scores[1])
 try:
     f = open('/project/out.txt','w')
-    f.write(str(int(scores[1])))
+    f.write(str(int(scores[1]*100)))
 except:
     print(end="")
 finally:
